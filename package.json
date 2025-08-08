@@ -1,0 +1,46 @@
+{
+  "name": "cloudidada",
+  "version": "1.0.0",
+  "main": "production-server-direct.js",
+  "scripts": {
+    "start": "node production-server-direct.js",
+    "dev": "nodemon production-server-direct.js",
+    "build": "echo 'Build completed'",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "keywords": [
+    "storage",
+    "cloudinary",
+    "firebase",
+    "file-upload",
+    "api",
+    "nodejs",
+    "express"
+  ],
+  "author": "CloudIdada Team",
+  "license": "MIT",
+  "description": "Professional Cloud Storage Platform with Firebase-style API Key Management",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "cloudinary": "^1.40.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-rate-limit": "^6.8.1",
+    "firebase-admin": "^11.10.1",
+    "form-data": "^4.0.4",
+    "helmet": "^7.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.4",
+    "node-fetch": "^3.3.2",
+    "socket.io": "^4.7.2"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.0",
+    "nodemon": "^3.1.10"
+  }
+}

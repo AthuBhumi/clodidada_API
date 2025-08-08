@@ -1,0 +1,27 @@
+# Vercel deployment files
+.vercel
+
+# Environment variables (will be set in Vercel dashboard)
+.env.local
+.env.production
+
+# Build cache
+.next/
+dist/
+build/
+
+# Dependencies
+node_modules/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# Temporary files
+tmp/
+temp/
