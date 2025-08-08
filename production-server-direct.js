@@ -31,12 +31,12 @@ if (!process.env.VERCEL) {
     io = new Server(server, {
         cors: {
             origin: process.env.CORS_ORIGIN?.split(',') || [
-                "http://localhost:3000", 
+                "http://localhost:3004", 
                 "http://localhost:3001",
                 "http://127.0.0.1:5500",
                 "http://localhost:5500",
                 "https://cloudidada121.vercel.app",
-                "http://localhost:3000",
+                "http://localhost:3004",
                 "https://*.vercel.app"
             ],
             methods: ["GET", "POST", "PUT", "DELETE"]
@@ -50,7 +50,7 @@ if (!process.env.VERCEL) {
 }
 
 // Port configuration
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3004;
 
 // Security middleware with custom CSP for dashboard
 app.use(helmet({
@@ -62,7 +62,7 @@ app.use(helmet({
             styleSrc: ["'self'", "'unsafe-inline'", "https://cdnjs.cloudflare.com", "https://fonts.googleapis.com"],
             fontSrc: ["'self'", "https://fonts.gstatic.com", "https://cdnjs.cloudflare.com"],
             imgSrc: ["'self'", "data:", "https:", "blob:", "https://res.cloudinary.com", "https://*.cloudinary.com"],
-            connectSrc: ["'self'", "http://localhost:3000", "http://localhost:3001", "http://127.0.0.1:5500", "http://localhost:5500", "ws:", "wss:", "https://api.cloudinary.com"],
+            connectSrc: ["'self'", "http://localhost:3004", "http://localhost:3001", "http://127.0.0.1:5500", "http://localhost:5500", "ws:", "wss:", "https://api.cloudinary.com"],
             objectSrc: ["'none'"],
             mediaSrc: ["'self'", "https:", "blob:"],
             frameSrc: ["'none'"]
@@ -71,12 +71,12 @@ app.use(helmet({
 }));
 app.use(cors({
     origin: process.env.CORS_ORIGIN?.split(',') || [
-        "http://localhost:3000", 
+        "http://localhost:3004", 
         "http://localhost:3001",
         "http://127.0.0.1:5500",
         "http://localhost:5500",
         "https://cloudidada121.vercel.app",
-        "http://localhost:3000",
+        "http://localhost:3004",
         "https://*.vercel.app"
     ],
     credentials: true,
@@ -327,8 +327,8 @@ const uploadToCloudinary = async (fileInput, options = {}) => {
         
         const mockResult = {
             public_id: `local/${newFileName}`,
-            url: `http://localhost:3000/uploads/${newFileName}`,
-            secure_url: `http://localhost:3000/uploads/${newFileName}`,
+            url: `http://localhost:3004/uploads/${newFileName}`,
+            secure_url: `http://localhost:3004/uploads/${newFileName}`,
             format: path.extname(fileInput).substring(1),
             resource_type: 'image',
             bytes: fs.statSync(fileInput).size,

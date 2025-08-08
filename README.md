@@ -23,8 +23,8 @@ CloudIdada is a powerful, enterprise-grade file management API platform that pro
    ```
 
 4. **Access Dashboard**
-   - Console: http://localhost:3000/console.html
-   - Health Check: http://localhost:3000/api/health
+   - Console: http://localhost:3004/console.html
+   - Health Check: http://localhost:3004/api/health
 
 ## 📚 Documentation
 
@@ -46,21 +46,21 @@ CloudIdada is a powerful, enterprise-grade file management API platform that pro
 ## 🔑 API Key Usage
 
 ### Generate API Key
-1. Register/Login at `http://localhost:3000/console.html`
+1. Register/Login at `http://localhost:3004/console.html`
 2. Navigate to Dashboard
 3. Click "Generate New API Key"
 4. Copy your API key (e.g., `cld_demo_8ak2pu`)
 
 ### Upload File Example
 ```bash
-curl -X POST http://localhost:3000/api/files/upload \
+curl -X POST http://localhost:3004/api/files/upload \
   -H "x-api-key: YOUR_API_KEY" \
   -F "file=@your-file.jpg"
 ```
 
 ### List Files Example
 ```bash
-curl -X GET http://localhost:3000/api/files/list \
+curl -X GET http://localhost:3004/api/files/list \
   -H "x-api-key: YOUR_API_KEY"
 ```
 
@@ -87,7 +87,7 @@ CloudIdada Platform
 
 ```bash
 # Server Configuration
-PORT=3000
+PORT=3004
 NODE_ENV=development
 
 # Firebase Configuration
@@ -136,7 +136,7 @@ cloudidada-main/
 powershell .\image-upload-test.ps1
 
 # Test API endpoints
-curl http://localhost:3000/api/health
+curl http://localhost:3004/api/health
 ```
 
 ## 🚀 Deployment
